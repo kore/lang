@@ -55,6 +55,10 @@ Core principles
 
     * Work just like interfaces, no concrete methods allowed
 
+  * By now I do not see a real usecase for private / protected / package
+    visibility any more … is this really needed? Some annotation which classes
+    are the "public" interface would be required, though.
+
 * Side effects
 
   * All side effects must be explicit (output, exceptions, global scope

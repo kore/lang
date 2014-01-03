@@ -77,6 +77,9 @@ Core principles
   * Pure methods (functions) are preferred (they are distributable (accross
     threads, CPUs, machines, …))
 
+  * Monads can help to pass side effects around without interfering with other
+    execution paths. Monads should be first class language citizens.
+
 * Asynchronous IO
 
   * Simple with pure functions. Wanted side effects / join points via messaging

@@ -2,11 +2,25 @@
 Language Design
 ===============
 
-Design for on object oriented language for the modern age.
+Goals
+=====
 
-Core principles:
+The goal is to define a clean object oriented language which fulfills a set of
+goals:
 
-* Structs ("Objects" with copy on write)
+* Integration of functional concepts to verify if this works together with OOP
+  and open the space for horizontal scalability
+
+* Sane support for values / value objects
+
+* Less boilerplate code
+
+  * Constructors (field assignements), Setter, Getters are always the same.
+
+Core principles
+===============
+
+* Structs ("Objects" with copy on write) (newables)
 
   * Are they allowed to define methods?
 
@@ -20,17 +34,18 @@ Core principles:
 
   * Work like structs, is there a differentiation required?
 
-  * Weak typing (string to integer) MUST work somehow. Conversions of complex
-    types should work alike.
+  * Weak typing (string to integer, …) MUST work somehow. Conversions of
+    complex types chould work somehow alike.
 
-* Classes
+* Classes ("Services")
 
   * Fields on defined dependencies, no scalar "properties" allowed
 
   * Fields are automatically initialized
 
-    * If multiple implementations of a type exist (no defined auto-wiring) we
-      require dependency configuration, how should that look like?
+    * If multiple implementations of a type exist (undefined auto-wiring
+      resolution) we require dependency configuration, how should that look
+      like?
 
   * Interfaces
 
@@ -59,7 +74,7 @@ Core principles:
 Syntax
 ======
 
-I could not care less…
+I could not care less, but we will need one…
 
 Compilation Target
 ==================

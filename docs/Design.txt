@@ -1,0 +1,84 @@
+===============
+Language Design
+===============
+
+Design for on object oriented language for the modern age.
+
+Core principles:
+
+* Structs ("Objects" with copy on write)
+
+  * Are they allowed to define methods?
+
+  * Are inline validations allowed?
+
+  * Assign Validators to fields
+
+  * How do we want to implement autoboxing (/ weak typing)?
+
+* Scalar types
+
+  * Work like structs, is there a differentiation required?
+
+  * Weak typing (string to integer) MUST work somehow. Conversions of complex
+    types should work alike.
+
+* Classes
+
+  * Fields on defined dependencies, no scalar "properties" allowed
+
+  * Fields are automatically initialized
+
+    * If multiple implementations of a type exist (no defined auto-wiring) we
+      require dependency configuration, how should that look like?
+
+  * Interfaces
+
+    * Just as always
+
+  * Abstract classes
+
+    * Work just like interfaces, no concrete methods allowed
+
+* Side effects
+
+  * All side effects must be explicit (output, exceptions, global scope
+    modifications).
+
+    * In development mode side effects are allowed (debugging output), in
+      production mode there will be "warnings".
+
+  * Pure methods (functions) are preferred (they are distributable (accross
+    threads, CPUs, machines, …))
+
+* Asynchronous IO
+
+  * Simple with pure functions. Wanted side effects / join points via messaging
+    / promises?
+
+Syntax
+======
+
+I could not care less…
+
+Compilation Target
+==================
+
+What would be the best compilation target for such a language?
+
+* Java Bytecode
+
+* asm.js
+
+* Erlang
+
+* C
+
+* …?
+
+..
+   Local Variables:
+   mode: rst
+   fill-column: 79
+   End: 
+   vim: et syn=rst tw=79

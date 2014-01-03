@@ -37,6 +37,13 @@ Core principles
   * Weak typing (string to integer, …) MUST work somehow. Conversions of
     complex types chould work somehow alike.
 
+* Entities
+
+  * Entities are value objects with an ID. They should only occur once in an
+    application and often mimic a remote state (database, web service, file
+    system, …). Remote state is gloabl state and often managed by a central
+    identity map. How can this be mapped to functional concepts?
+
 * Classes ("Services")
 
   * Fields on defined dependencies, no scalar "properties" allowed

@@ -54,6 +54,8 @@ Core principles
       resolution) we require dependency configuration, how should that look
       like?
 
+    * Constructors / Destructors do NOT exist
+
   * Interfaces
 
     * Just as always
